@@ -25,7 +25,7 @@ for x in range(3):
         counter+=1
 
 # Zero button
-button = Button(root, text="0", width = 3, height = 3)
+button = Button(root, text="0", width = 3, height = 3, command=lambda : get_number(0))
 button.grid(row=5, column=1)
 
 # Operational buttons
