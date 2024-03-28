@@ -49,4 +49,7 @@ for x in range(4):
 # Clear button
 Button(root, text="AC", width=3, height=3).grid(row=5, column=0)
 
+# Equal button
+Button(root, text="=", width=3, height=3).grid(row=5, column=2)
+
 root.mainloop()
