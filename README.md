@@ -70,7 +70,7 @@ Run the app:
 <a id='screenshots'></a>
 ## Screenshots/Gifs:
 
-* Gif of calculator being built *
+*Gif of calculator being built*
 
 <img src="https://github.com/jenstem/python-calculator-app/blob/main/calculator.gif" width=1000>
 
