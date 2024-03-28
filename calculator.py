@@ -15,6 +15,9 @@ def get_operation(operator):
     display.insert(i, operator)
     i+=length
 
+def clear_all():
+    display.delete(0, END)
+
 display = Entry(root)
 display.grid(row=1, columnspan=6)
 
@@ -47,7 +50,7 @@ for x in range(4):
             button.grid(row = x + 2, column = y + 3)
 
 # Clear button
-Button(root, text="AC", width=3, height=3).grid(row=5, column=0)
+Button(root, text="AC", width=3, height=3, command=clear_all).grid(row=5, column=0)
 
 # Equal button
 Button(root, text="=", width=3, height=3).grid(row=5, column=2)
