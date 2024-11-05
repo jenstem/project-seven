@@ -6,20 +6,41 @@ root =Tk()
 i = 0
 
 def get_number(num):
+    """
+    Inserts a number into the display at the current position.
+
+    Args:
+        num (str): The number to be inserted.
+    """
     global i
     display.insert(i, num)
     i+=1
 
 def get_operation(operator):
+    """
+    Inserts an operator into the display at the current position.
+
+    Args:
+        operator (str): The operator to be inserted.
+    """
     global i
     length = len(operator)
     display.insert(i, operator)
     i+=length
 
 def clear_all():
+    """
+    Clears the entire display.
+    """
     display.delete(0, END)
 
 def calculate():
+    """
+    Evaluates the expression in the display and shows the result.
+
+    Raises:
+        Exception: If the expression is invalid, it clears the display and shows "Error".
+    """
     entire_string = display.get()
     try:
         node = ast.parse(entire_string, mode='eval')
@@ -31,6 +52,9 @@ def calculate():
         display.insert(0, "Error")
 
 def undo():
+    """
+    Removes the last character from the display.
+    """
     entire_string = display.get()
     if len(entire_string):
         new_string = entire_string[:-1]
